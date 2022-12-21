@@ -9,12 +9,13 @@ To get started with IpInfoAPI, you'll need to make sure that you have the follow
 
 * .NET 6
 * Microsoft SQL Server
+
 You'll also need to make sure that you have a database set up and connected to the API. The database should include a Countries table with the following fields:
 
-Id (int, primary key)
-TwoLetterCode (string(2))
-ThreeLetterCode (string(3))
-Name (string(50))
+* Id (int, primary key)
+* TwoLetterCode (string(2))
+* ThreeLetterCode (string(3))
+* Name (string(50))
 Once you have the above dependencies installed and your database set up, you can start the API by running the following command from the root directory of the project:
 ```
 dotnet run
@@ -48,7 +49,7 @@ dotnet test
 ```
 
 ## 🔨Built With
-* .NET6 
+* C# .NET 6 
 * Microsoft SQL Server  
 
 ## 📚Documentation

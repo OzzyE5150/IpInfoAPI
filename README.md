@@ -1,7 +1,9 @@
 # 🌐IpInfoAPI
+![C#](https://img.shields.io/badge/c%23-%23239120.svg?style=for-the-badge&logo=c-sharp&logoColor=white) ![.Net](https://img.shields.io/badge/.NET-5C2D91?style=for-the-badge&logo=.net&logoColor=white) ![MicrosoftSQLServer](https://img.shields.io/badge/Microsoft%20SQL%20Sever-CC2927?style=for-the-badge&logo=microsoft%20sql%20server&logoColor=white) ![Swagger](https://img.shields.io/badge/-Swagger-%23Clojure?style=for-the-badge&logo=swagger&logoColor=white)
+
  IpInfoAPI is a simple API that allows you to get information about countries based on IP addresses or country codes, using the [IP2C](https://about.ip2c.org/#about) service.
 
-## 🏃Getting Started
+## 🚀Getting Started
 
 To get started with IpInfoAPI, you'll need to make sure that you have the following dependencies installed:
 
@@ -46,8 +48,8 @@ dotnet test
 ```
 
 ## 🔨Built With
-* .NET6 ![C#](https://img.shields.io/badge/c%23-%23239120.svg?style=for-the-badge&logo=c-sharp&logoColor=white) ![.Net](https://img.shields.io/badge/.NET-5C2D91?style=for-the-badge&logo=.net&logoColor=white)
-* Microsoft SQL Server  ![MicrosoftSQLServer](https://img.shields.io/badge/Microsoft%20SQL%20Sever-CC2927?style=for-the-badge&logo=microsoft%20sql%20server&logoColor=white)
-* Documentation and test environment using Swagger ![Swagger](https://img.shields.io/badge/-Swagger-%23Clojure?style=for-the-badge&logo=swagger&logoColor=white)
+* .NET6 
+* Microsoft SQL Server  
 
-
+## 📚Documentation
+IpInfoAPI includes documentation and an interactive testing environment using Swagger.

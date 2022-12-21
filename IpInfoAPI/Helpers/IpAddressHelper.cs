@@ -11,13 +11,21 @@ namespace IpInfoAPI.Helpers
         private IpAddressRepo addressRepo;
         private IMemoryCache _cache;
 
+        /// <summary>
+        /// Set repository contexts and cache
+        /// </summary>
+        /// <param name="cache"></param>
+        /// <exception cref="ArgumentNullException">Throws if cache is null</exception>
         public IpAddressHelper(IMemoryCache cache)
         {
             this.countryRepo = new(new Models.DbContext());
             this.addressRepo = new(new Models.DbContext());
             _cache = cache ?? throw new ArgumentNullException(nameof(cache));
         }
-
+        /// <summary>
+        /// Updates the IP Addresses using ip2c
+        /// </summary>
+        /// <returns></returns>
         public async Task UpdateIpAddresses()
         {
             List<IpAddress> ipAddresses = new();

@@ -15,12 +15,23 @@ namespace IpInfoAPI.Controllers
         public static IMemoryCache _memoryCache;
         private readonly CountryRepo countryRepo;
         private readonly IpAddressRepo ipAddressRepo;
+
+        /// <summary>
+        /// Set repository contexts and cache
+        /// </summary>
+        /// <param name="cache"></param>
+        /// <exception cref="ArgumentNullException">Throws if cache is null</exception>
         public CountryController(IMemoryCache? cache)
         {
             this.countryRepo = new(new Models.DbContext());
             this.ipAddressRepo = new(new Models.DbContext());
             _memoryCache = cache?? throw new ArgumentNullException(nameof(cache));
         }
+        /// <summary>
+        /// Gets Country by given IP
+        /// </summary>
+        /// <param name="ip">IP address to lookup</param>
+        /// <returns></returns>
         [HttpGet("/{ip}")]
         public async Task<CountryByIpRes> GetByIp(string ip)
         {
@@ -81,6 +92,11 @@ namespace IpInfoAPI.Controllers
                 ThreeLetterCode = country.ThreeLetterCode,
             };
         }
+        /// <summary>
+        /// Returns the country that corresponds to the two letter code
+        /// </summary>
+        /// <param name="TwoLetterList"></param>
+        /// <returns></returns>
         [HttpPost("/reports")]
         public async Task<IEnumerable<CountryRes>?> GetCountry(string[]? TwoLetterList)
         {

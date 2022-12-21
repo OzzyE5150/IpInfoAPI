@@ -7,6 +7,12 @@ namespace IpInfoAPI.Helpers
     public class SqlCommandHelper
     {
         private const string ConnectionString = "Server=localhost; Database=db; Trusted_Connection = True; Encrypt=False;";
+
+        /// <summary>
+        /// Runs a SQL query using the given string
+        /// </summary>
+        /// <param name="query"></param>
+        /// <returns></returns>
         private static async Task<List<Dictionary<string, object>>> RunQueryStringSelect(string query)
         {
             SqlConnection sqlConnection = new(ConnectionString);
@@ -28,6 +34,11 @@ namespace IpInfoAPI.Helpers
             }
             return rows;
         }
+        /// <summary>
+        /// Queries for country response (raw SQL)
+        /// </summary>
+        /// <param name="TwoLetterList"></param>
+        /// <returns></returns>
         public static async Task<IEnumerable<CountryRes>?> QueryCountryRes(string[]? TwoLetterList)
         {
             string query = @"SELECT 

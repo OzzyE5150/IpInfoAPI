@@ -7,6 +7,11 @@ namespace IpInfoAPI.Helpers
 {
     public class TaskHelper
     {
+        /// <summary>
+        /// Schedules update job with given seconds trigger
+        /// </summary>
+        /// <param name="seconds">Job trigger interval in seconds</param>
+        /// <returns></returns>
         public static async Task Init(int seconds)
         {
             StdSchedulerFactory factory = new();
@@ -27,6 +32,9 @@ namespace IpInfoAPI.Helpers
 
             await scheduler.ScheduleJob(job, trigger);
         }
+        /// <summary>
+        /// Updates the IP Addresses in the cache
+        /// </summary>
         public class UpdateIpAddress : IJob
         {
             public async Task Execute(IJobExecutionContext context)

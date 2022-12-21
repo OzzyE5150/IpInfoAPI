@@ -16,6 +16,7 @@ You'll also need to make sure that you have a database set up and connected to t
 * TwoLetterCode (string(2))
 * ThreeLetterCode (string(3))
 * Name (string(50))
+
 Once you have the above dependencies installed and your database set up, you can start the API by running the following command from the root directory of the project:
 ```
 dotnet run

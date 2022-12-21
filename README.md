@@ -14,7 +14,9 @@ TwoLetterCode (string(2))
 ThreeLetterCode (string(3))
 Name (string(50))
 Once you have the above dependencies installed and your database set up, you can start the API by running the following command from the root directory of the project:
-`dotnet run`
+```
+dotnet run
+```
 
 ## 🔌Endpoints 
 
@@ -39,7 +41,9 @@ This endpoint allows you to get information about multiple countries based on th
 ```
 ## ⚗️Testing 
 To run the tests for IpInfoAPI, navigate to the TestProject directory and run the following command:
-`dotnet test`
+```
+dotnet test
+```
 
 ## 🔨Built With
 * .NET6 ![C#](https://img.shields.io/badge/c%23-%23239120.svg?style=for-the-badge&logo=c-sharp&logoColor=white) ![.Net](https://img.shields.io/badge/.NET-5C2D91?style=for-the-badge&logo=.net&logoColor=white)

@@ -22,7 +22,7 @@ dotnet run
 
 IpInfoAPI has two main endpoints:
 
-### GET /{ipAddress} 
+### GET /{ip} 
 This endpoint allows you to get information about a specific country based on an IP address. The response will be in the following format:
 ```json
 {
